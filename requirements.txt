@@ -1,13 +1,24 @@
-pillow-heif
-gspread
-google-auth-oauthlib
-pandas
-scikit-learn
-pytz
+# requirements.txt
+
+# Core de Machine Learning y Deep Learning
 tensorflow
+scikit-learn
+
+# Manipulación y Análisis de Datos
+pandas
+numpy
+
+# Visualización de Datos
 matplotlib
 seaborn
-numpy
+
+# Interfaz Web
 streamlit
+
+# Herramientas de Conectividad y Utilidades
 pyngrok
+gspread
+google-auth-oauthlib
+pillow-heif
+pytz
 ipywidgets

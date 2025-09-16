@@ -15,5 +15,3 @@ nohup.out
 # Archivos de entorno de Python
 .env
 venv/
-
-ANALISIS_PROYECTO.md
