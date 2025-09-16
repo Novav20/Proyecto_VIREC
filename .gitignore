@@ -1,0 +1,19 @@
+# Archivo de configuración local con información sensible
+config.py
+
+# Archivos de caché y compilados de Python
+__pycache__/
+*.pyc
+
+# Directorios de checkpoints de Colab/Jupyter
+.ipynb_checkpoints/
+
+# Archivos de registro y salida de ejecución
+nohup.out
+*.log
+
+# Archivos de entorno de Python
+.env
+venv/
+
+ANALISIS_PROYECTO.md

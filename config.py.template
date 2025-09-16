@@ -1,0 +1,26 @@
+# ==========================================================
+#      ARCHIVO DE CONFIGURACIÓN DEL PROYECTO VIREC
+# ==========================================================
+# INSTRUCCIONES:
+# 1. Renombra este archivo a "config.py".
+# 2. Rellena los valores de las variables a continuación.
+# 3. ¡IMPORTANTE! El archivo 'config.py' está en el .gitignore,
+#    por lo que tu información personal nunca se subirá a GitHub.
+# ==========================================================
+
+# --- Google Drive IDs ---
+# El ID de tu carpeta de Google Drive para las fotos propias.
+# (Lo encuentras en la URL de la carpeta. Ej: .../folders/ESTE_ES_EL_ID)
+ID_CARPETA_PROPIAS = "PEGA_AQUÍ_EL_ID_DE_TU_CARPETA_fotos_crudas_propias"
+
+# El ID de tu carpeta de Google Drive para las fotos externas.
+ID_CARPETA_EXTERNAS = "PEGA_AQUÍ_EL_ID_DE_TU_CARPETA_fotos_crudas_externas"
+
+# --- Google Sheets ---
+# El nombre exacto de tu archivo de Google Sheets para los experimentos.
+NOMBRE_HOJA_EXPERIMENTOS = "VIREC - Hoja de Experimentos"
+
+# --- Ngrok (Para la interfaz de Streamlit) ---
+# Tu token de autenticación de Ngrok.
+# Lo obtienes gratis en: https://dashboard.ngrok.com/get-started/your-authtoken
+NGROK_AUTH_TOKEN = "PEGA_AQUÍ_TU_TOKEN_DE_AUTENTICACIÓN_DE_NGROK"

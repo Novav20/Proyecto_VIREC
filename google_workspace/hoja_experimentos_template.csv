@@ -1,0 +1,1 @@
+experiment_id,modelo_base,learning_rate,batch_size,epochs,img_size,use_augmentation,use_grayscale,dataset_source,status,fecha_completado,best_val_accuracy,test_accuracy,test_precision,test_recall,test_f1_score,test_auc,ruta_modelo_guardado,log_error

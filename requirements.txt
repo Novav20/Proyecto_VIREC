@@ -1,0 +1,13 @@
+pillow-heif
+gspread
+google-auth-oauthlib
+pandas
+scikit-learn
+pytz
+tensorflow
+matplotlib
+seaborn
+numpy
+streamlit
+pyngrok
+ipywidgets
