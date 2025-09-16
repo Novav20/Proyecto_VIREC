@@ -19,6 +19,7 @@ ID_CARPETA_EXTERNAS = "PEGA_AQUÍ_EL_ID_DE_TU_CARPETA_fotos_crudas_externas"
 # --- Google Sheets ---
 # El nombre exacto de tu archivo de Google Sheets para los experimentos.
 NOMBRE_HOJA_EXPERIMENTOS = "VIREC - Hoja de Experimentos"
+NOMBRE_HOJA_ETIQUETAS = "VIREC - Hoja de Etiquetas del Dataset"
 
 # --- Ngrok (Para la interfaz de Streamlit) ---
 # Tu token de autenticación de Ngrok.

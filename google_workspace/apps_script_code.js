@@ -128,8 +128,6 @@ function onOpen() {
       .createMenu('🤖 VIREC Tools')
       .addItem('Sincronizar Nuevos Archivos', 'sincronizarAmbasFuentes')
       .addSeparator()
-      .addItem('Exportar CSV a Google Drive', 'exportarCSV')
-      .addSeparator()
       .addItem('Diagnosticar Carpeta...', 'diagnosticarCarpetaDinamico')
       .addToUi();
 }
@@ -143,40 +141,6 @@ function onEdit(e) {
   if (e.range.getSheet().getLastColumn() >= 5 && hoja.getName() === NOMBRE_HOJA && e.range.getColumn() === 2 && e.range.getRow() > 1) {
     if (e.value) { hoja.getRange(e.range.getRow(), 5).setValue(new Date()); } 
     else { hoja.getRange(e.range.getRow(), 5).clearContent(); }
-  }
-}
-
-/**
- * Exporta la hoja activa como un archivo CSV en la misma carpeta de Drive de la hoja.
- */
-function exportarCSV() {
-  try {
-    var hojaCalculo = SpreadsheetApp.getActiveSpreadsheet();
-    var hoja = hojaCalculo.getSheetByName(NOMBRE_HOJA);
-    var archivoPadre = DriveApp.getFileById(hojaCalculo.getId());
-    var carpetas = archivoPadre.getParents();
-    if (!carpetas.hasNext()) { throw new Error("No se pudo encontrar la carpeta contenedora."); }
-    var carpetaDestino = carpetas.next();
-    var nombreArchivoCSV = "VIREC - Hoja de Etiquetas del Dataset.csv"; // Nombre fijo para consistencia
-    var datos = hoja.getDataRange().getValues();
-    var contenidoCSV = datos.map(function(fila) {
-      return fila.map(function(celda) {
-        var celdaStr = celda.toString();
-        if (celdaStr.includes(',') || celdaStr.includes('"') || celdaStr.includes('\n')) {
-          return '"' + celdaStr.replace(/"/g, '""') + '"';
-        }
-        return celdaStr;
-      }).join(',');
-    }).join('\n');
-    var archivosExistentes = carpetaDestino.getFilesByName(nombreArchivoCSV);
-    if (archivosExistentes.hasNext()) {
-      archivosExistentes.next().setContent(contenidoCSV);
-    } else {
-      carpetaDestino.createFile(nombreArchivoCSV, contenidoCSV, MimeType.CSV);
-    }
-    SpreadsheetApp.getUi().alert("¡Éxito! El archivo '" + nombreArchivoCSV + "' ha sido exportado/actualizado.");
-  } catch (e) {
-    SpreadsheetApp.getUi().alert("Error al exportar CSV: " + e.toString());
   }
 }
 
