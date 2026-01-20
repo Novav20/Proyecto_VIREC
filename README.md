@@ -42,7 +42,7 @@ Sigue estos pasos para poner en marcha el proyecto en tu propio entorno de Googl
 
 ### 1. Clonar el Repositorio
 ```bash
-git clone https://github.com/tu-usuario/Proyecto_VIREC.git
+git clone https://github.com/Novav20/Proyecto_VIREC.git
 ```
 
 ### 2. Configurar Google Drive
